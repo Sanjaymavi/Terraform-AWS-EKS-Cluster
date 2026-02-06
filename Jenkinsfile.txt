@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        AWS_DEFAULT_REGION = "us-east-1"
+        AWS_DEFAULT_REGION = "us-east-2"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sanjaymavi/AWS-Terraform.git'
+                git branch: 'main', url: 'https://github.com/Sanjaymavi/Terraform-AWS-EKS-Cluster.git'
             }
         }
 
