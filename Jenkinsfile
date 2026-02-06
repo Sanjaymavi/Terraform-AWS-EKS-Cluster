@@ -91,5 +91,9 @@ pipeline {
         success {
             echo 'Terraform deployment successful!'
         }
+        always {
+            input message: 'Do you want to DESTROY the infrastructure?'
+            bat 'terraform destroy -auto-approve'
+         }
     }
 }
